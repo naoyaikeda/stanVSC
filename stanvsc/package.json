@@ -1,0 +1,26 @@
+{
+    "name": "stanvsc",
+    "displayName": "stanVSC",
+    "description": "Stan Language Support for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "NaoyaIkeda",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "stan",
+            "aliases": ["Stan", "stan"],
+            "extensions": [".stan"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "stan",
+            "scopeName": "source.stan",
+            "path": "./syntaxes/stan.tmLanguage.json"
+        }]
+    }
+}
