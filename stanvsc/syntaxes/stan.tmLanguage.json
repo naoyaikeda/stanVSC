@@ -3,6 +3,15 @@
 	"name": "Stan",
 	"patterns": [
 		{
+			"include": "#types"
+		},
+		{
+			"include": "#blocks"
+		},
+		{
+			"include": "#bool"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -10,10 +19,28 @@
 		}
 	],
 	"repository": {
+		"types": {
+			"patterns": [{
+				"name": "type.stan",
+				"match": "\\b(int|real|vector|matrix|simplex|unit_vector|ordered|row_vector|corr_matirx|cholesky_factor_corr|cov_matrix)\\b"
+			}]
+		},
+		"blocks": {
+			"patterns": [{
+				"name": "block.stan",
+				"match": "\\b(functions|model|data|quantities|transformed|generated|parameters)\\b"
+			}]
+		},
+		"bool": {
+			"patterns": [{
+				"name": "bool.stan",
+				"match": "\\b(true|false)\\b"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.stan",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(in|if|while|repeat|until|then|for)\\b"
 			}]
 		},
 		"strings": {
